@@ -5,7 +5,6 @@ const socialLinks = [
   { label: "Email", href: `mailto:${siteConfig.social.email}` },
   { label: "GitHub", href: siteConfig.social.github },
   { label: "LinkedIn", href: siteConfig.social.linkedin },
-  { label: "Twitter", href: siteConfig.social.twitter },
 ];
 
 export function Footer() {
