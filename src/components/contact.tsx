@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { GithubIcon, MailIcon, LinkedinIcon } from "@/components/icons";
+import { HighlightedText } from "@/components/highlighted-text";
 
 const contactMethods = [
   {
@@ -34,7 +35,7 @@ export function Contact() {
       </h2>
 
       <p className="mt-4 max-w-xl text-base leading-7 text-zinc-600 dark:text-zinc-400">
-        {siteConfig.contactMessage}
+        <HighlightedText text={siteConfig.contactMessage} term="Data Engineering" />
       </p>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-3">
@@ -44,7 +45,7 @@ export function Contact() {
             href={method.href}
             target={method.href.startsWith("http") ? "_blank" : undefined}
             rel={method.href.startsWith("http") ? "noopener noreferrer" : undefined}
-            className="group flex flex-col gap-3 rounded-2xl border border-black/10 p-5 transition-colors hover:border-sky-500/40 hover:bg-sky-500/5 dark:border-white/10"
+            className="group flex flex-col gap-3 rounded-2xl border border-black/10 bg-zinc-50 p-5 transition-colors hover:border-sky-500/40 hover:bg-sky-500/5 dark:border-white/10 dark:bg-zinc-900"
           >
             <method.icon className="h-5 w-5 text-zinc-400 transition-colors group-hover:text-sky-500 dark:text-zinc-500" />
             <div>

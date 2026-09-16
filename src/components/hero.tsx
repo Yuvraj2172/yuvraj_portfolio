@@ -8,6 +8,13 @@ const initials = siteConfig.name
   .map((part) => part[0])
   .join("");
 
+const taglineParts = [
+  { text: "Big Data", className: "text-sky-600 dark:text-sky-400" },
+  { text: "&", className: "text-zinc-400 dark:text-zinc-600" },
+  { text: "Azure", className: "text-indigo-600 dark:text-indigo-400" },
+  { text: "Data Engineer", className: "text-emerald-600 dark:text-emerald-400" },
+];
+
 export function Hero() {
   return (
     <section
@@ -28,8 +35,12 @@ export function Hero() {
         <h1 className="text-4xl font-bold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-5xl">
           {siteConfig.name}
         </h1>
-        <p className="text-lg text-zinc-600 dark:text-zinc-400">
-          {siteConfig.tagline}
+        <p className="flex flex-wrap items-center justify-center gap-x-2 text-xl font-bold sm:text-2xl">
+          {taglineParts.map((part) => (
+            <span key={part.text} className={part.className}>
+              {part.text}
+            </span>
+          ))}
         </p>
       </div>
 

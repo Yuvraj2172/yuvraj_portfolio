@@ -14,7 +14,7 @@ export function Projects() {
         {siteConfig.projects.map((project) => (
           <div
             key={project.slug}
-            className="rounded-2xl border border-black/10 p-6 dark:border-white/10"
+            className="rounded-2xl border border-black/10 bg-zinc-50 p-6 transition duration-300 ease-out hover:-translate-y-1 hover:border-sky-500/40 hover:shadow-lg dark:border-white/10 dark:bg-zinc-900"
           >
             <p className="font-mono text-xs text-sky-600 dark:text-sky-400">
               {project.kicker}
