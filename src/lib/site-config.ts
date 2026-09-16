@@ -2,6 +2,7 @@ export const siteConfig = {
   name: "Yuvraj Soni",
   role: "Data Engineer",
   tagline: "Big Data & Azure Data Engineer",
+  siteUrl: "https://yuvrajportfolio-ten.vercel.app",
   summary:
     "I design and build large-scale data pipelines with PySpark, Spark SQL, and Azure Databricks — turning raw telecom and financial data into reliable, real-time analytics at 100+ GB/day scale.",
   navLinks: [
