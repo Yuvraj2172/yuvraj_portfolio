@@ -1,12 +1,18 @@
+"use client";
+
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { siteConfig } from "@/lib/site-config";
 import { GithubIcon, MailIcon, LinkedinIcon } from "@/components/icons";
 import { TrafficLights } from "@/components/traffic-lights";
 
-const initials = siteConfig.name
-  .split(" ")
-  .map((part) => part[0])
-  .join("");
+const Hero3D = dynamic(
+  () => import("@/components/hero-3d").then((mod) => mod.Hero3D),
+  {
+    ssr: false,
+    loading: () => <div className="h-56 w-56" aria-hidden="true" />,
+  }
+);
 
 const taglineParts = [
   { text: "Big Data", className: "text-sky-600 dark:text-sky-400" },
@@ -21,12 +27,7 @@ export function Hero() {
       id="hero"
       className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center gap-8 py-16 text-center"
     >
-      <div
-        aria-hidden="true"
-        className="flex h-28 w-28 items-center justify-center rounded-2xl border border-black/10 bg-zinc-100 text-2xl font-semibold tracking-wide text-zinc-500 dark:border-white/10 dark:bg-zinc-800 dark:text-zinc-400"
-      >
-        {initials}
-      </div>
+      <Hero3D />
 
       <div className="flex flex-col items-center gap-3">
         <p className="font-mono text-sm font-medium text-sky-600 dark:text-sky-400">

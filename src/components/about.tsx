@@ -19,7 +19,7 @@ export function About() {
         About
       </h2>
 
-      <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-zinc-600 dark:text-zinc-400">
+      <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-zinc-600 dark:text-zinc-200">
         <HighlightedText text={teaser} term="Data Engineer" />
       </p>
 
@@ -27,7 +27,7 @@ export function About() {
         rest.map((paragraph) => (
           <p
             key={paragraph}
-            className="mx-auto mt-4 max-w-2xl text-base leading-7 text-zinc-600 dark:text-zinc-400"
+            className="mx-auto mt-4 max-w-2xl text-base leading-7 text-zinc-600 dark:text-zinc-200"
           >
             {paragraph}
           </p>
